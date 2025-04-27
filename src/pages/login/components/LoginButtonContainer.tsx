@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 
 const LoginButtonContainer = () => {
-  const AUTH_URL = `https://www.api-spinlog.shop/api/users/login`;
+  const AUTH_URL = `https://www.api-spinlog.shop2/api/users/login`;
 
   const navigate = useNavigate();
   const { setDemoState } = useAuthStore((state) => {
