@@ -5,9 +5,17 @@ import { useAuthStore } from '@stores/authStore';
 import { flexColumnCenter } from '@styles/CommonStyles';
 import styled from 'styled-components';
 
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const LoginButtonContainer = () => {
+  // 앱의 상단 컴포넌트에 추가
+  useEffect(() => {
+    console.log('현재 모드:', import.meta.env.MODE);
+    console.log('환경변수:', import.meta.env.VITE_VARIABLE_NAME);
+    console.log('모든 환경변수:', import.meta.env);
+  }, []);
+
   const AUTH_URL = `${import.meta.env.VITE_API_URL}/users/login`;
 
   const navigate = useNavigate();
