@@ -3,7 +3,7 @@ import { ACCESS_TOKEN_NAME } from '@stores/storeConfig';
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'https://www.api-spinlog.shop2/api',
+  baseURL: import.meta.env.VITE_API_URL,
   headers: {
     'Content-Type': 'application/json',
     //TemporaryAuth: 'OurAuthValue', // 임시 헤더 -> 로컬 요청 처리
